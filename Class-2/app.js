@@ -34,9 +34,20 @@
 // }
 
 
-let yourNum = +prompt('Enter Your Number To Create a Table')
+// let yourNum = +prompt('Enter Your Number To Create a Table')
 
-let YourRange = +prompt('Enter Your Range For Table')
-for (let i = 1; i <= YourRange; i++) {
-    document.write(yourNum + " x " + i + " = " + yourNum * i + '</br>')
-}
+// let YourRange = +prompt('Enter Your Range For Table')
+// for (let i = 1; i <= YourRange; i++) {
+//     document.write(yourNum + " x " + i + " = " + yourNum * i + '</br>')
+// }
+
+// let yourAge = +prompt('Enter Your Age')
+
+// if (yourAge == 20) {
+//     alert('You are young')
+// } else {
+//     alert('You are old')
+// }
+
+// let age = yourAge == 20 ? 'Allow' : 'Not Allow'
+// console.log(age);
