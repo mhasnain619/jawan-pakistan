@@ -84,7 +84,7 @@
 // }
 // let percentage = +prompt('Enter your number')
 
-// let check = percentage >= 33 && percentage <= 50 ? "E grade": 
+// let check = percentage >= 33 && percentage <= 50 ? "E grade":
 // percentage >= 51 && percentage <= 66 ? "D grade":
 // percentage >= 67 && percentage <= 80 ? "C grade":
 // percentage >= 81 && percentage <= 100 ? "B grade" : "A grade"
@@ -111,12 +111,30 @@
 // console.log(check)
 
 
-let percentage = +prompt('Enter Your Percantege')
+// let percentage = +prompt('Enter Your Percantege')
 
-let check = percentage >= 31 && percentage <= 50 ? "grade D" :
-    percentage >= 51 && percentage <= 60 ? "grade c" :
-        percentage >= 61 && percentage <= 70 ? "grade b" :
-            percentage >= 71 && percentage <= 80 ? "grade a" :
-                percentage >= 81 && percentage <= 100 ? "grade a++" : "invalid percantage"
-console.log(check);
+// let check = percentage >= 31 && percentage <= 50 ? "grade D" :
+//     percentage >= 51 && percentage <= 60 ? "grade c" :
+//         percentage >= 61 && percentage <= 70 ? "grade b" :
+//             percentage >= 71 && percentage <= 80 ? "grade a" :
+//                 percentage >= 81 && percentage <= 100 ? "grade a++" : "invalid percantage"
+// console.log(check);
 
+
+/// Object Method
+
+let obj = {
+    name: 'John',
+    age: 25,
+    city: 'karachi'
+}
+
+console.log(Object.entries(obj));
+
+
+// solve question 2
+
+// two dropdown
+
+// first drop ki options ma keys show karana h
+// means samsumg iphone  realme
