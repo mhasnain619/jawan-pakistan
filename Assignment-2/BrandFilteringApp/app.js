@@ -1,4 +1,5 @@
-
+let brandOptions = document.getElementById("brandOptions");
+const selectedBrand = document.getElementById("selectedBrand");
 var mobiles = {
     iphone: {
         iphone7: {
@@ -629,3 +630,30 @@ var mobiles = {
         },
     },
 };
+
+
+let brandNames = Object.keys(mobiles);
+for (let brand of brandNames) {
+    let option = document.createElement("option");
+    option.text = brand.charAt(0).toUpperCase() + brand.slice(1);
+    option.value = brand;
+    brandOptions.appendChild(option);
+}
+// Add event listener to update selectedBrand dropdown
+brandOptions.addEventListener("change", (event) => {
+    const selectedBrandName = event.target.value;
+
+    // Clear previous options in selectedBrand dropdown
+    selectedBrand.innerHTML = `<option value="" disabled selected>Select a phone model</option>`;
+
+    // Populate selectedBrand with models of the selected brand
+    const brandModels = mobiles[selectedBrandName];
+    for (let model in brandModels) {
+        let option = document.createElement("option");
+        option.value = model;
+        option.text = model.charAt(0).toUpperCase() + model.slice(1); // Capitalize first letter
+        selectedBrand.appendChild(option);
+    }
+});
+
+
