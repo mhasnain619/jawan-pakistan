@@ -671,13 +671,14 @@ brandOptions.addEventListener("change", (event) => {
         // Get the details of the selected model
         const selectedModelDetails = mobiles[brandOptions.value][selectedModel];
 
+
         // Clear previous content in the details container
         detailsContainer.innerHTML = "";
 
         // Display the details of the selected model
         if (selectedModelDetails) {
             const detailsHTML = `
-            <h3>${selectedModel.charAt(0).toUpperCase() + selectedModel.slice(1)} Details</h3>
+            <h4>${selectedModel.charAt(0).toUpperCase() + selectedModel.slice(1)} Details</h4>
             <ul>
                 <li><strong>Processor:</strong> ${selectedModelDetails.processor}</li>
                 <li><strong>RAM:</strong> ${selectedModelDetails.memory.ram}GB</li>
