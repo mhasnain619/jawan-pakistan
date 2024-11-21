@@ -1,5 +1,8 @@
 let brandOptions = document.getElementById("brandOptions");
 const selectedBrand = document.getElementById("selectedBrand");
+const searchBtn = document.getElementById("searchBtn");
+const detailsContainer = document.getElementById("detailsContainer");
+
 var mobiles = {
     iphone: {
         iphone7: {
@@ -633,6 +636,8 @@ var mobiles = {
 
 
 let brandNames = Object.keys(mobiles);
+
+
 for (let brand of brandNames) {
     let option = document.createElement("option");
     option.text = brand.charAt(0).toUpperCase() + brand.slice(1);
@@ -642,7 +647,6 @@ for (let brand of brandNames) {
 // Add event listener to update selectedBrand dropdown
 brandOptions.addEventListener("change", (event) => {
     const selectedBrandName = event.target.value;
-
     // Clear previous options in selectedBrand dropdown
     selectedBrand.innerHTML = `<option value="" disabled selected>Select a phone model</option>`;
 
@@ -654,6 +658,43 @@ brandOptions.addEventListener("change", (event) => {
         option.text = model.charAt(0).toUpperCase() + model.slice(1); // Capitalize first letter
         selectedBrand.appendChild(option);
     }
+    searchBtn.addEventListener("click", () => {
+        // Get the selected model from the dropdown
+        const selectedModel = selectedBrand.value;
+
+        // Ensure a model is selected
+        if (!selectedModel) {
+            detailsContainer.innerHTML = "<p>Please select a phone model to view details.</p>";
+            return;
+        }
+
+        // Get the details of the selected model
+        const selectedModelDetails = mobiles[brandOptions.value][selectedModel];
+
+        // Clear previous content in the details container
+        detailsContainer.innerHTML = "";
+
+        // Display the details of the selected model
+        if (selectedModelDetails) {
+            const detailsHTML = `
+            <h3>${selectedModel.charAt(0).toUpperCase() + selectedModel.slice(1)} Details</h3>
+            <ul>
+                <li><strong>Processor:</strong> ${selectedModelDetails.processor}</li>
+                <li><strong>RAM:</strong> ${selectedModelDetails.memory.ram}GB</li>
+                <li><strong>Storage:</strong> ${selectedModelDetails.memory.storage}GB</li>
+                <li><strong>Battery:</strong> ${selectedModelDetails.battery}mAh</li>
+                <li><strong>Operating System:</strong> ${selectedModelDetails.operatingSystem}</li>
+                <li><strong>Special Features:</strong> ${selectedModelDetails.specialFeatures}</li>
+            </ul>
+        `;
+            detailsContainer.innerHTML = detailsHTML;
+        } else {
+            detailsContainer.innerHTML = "<p>No details available for the selected model.</p>";
+        }
+    });
+
 });
+
+
 
 
