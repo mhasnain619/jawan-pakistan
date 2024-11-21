@@ -6,9 +6,27 @@
     text-align: center;
 }
 
+#selectedBrand,
+#brandOptions {
+    border: none;
+    background-color: aliceblue;
+    padding: 5px 10px;
+}
+
 .inputs {
     display: flex;
+    border: none;
     justify-content: center;
     gap: 5px;
     width: 100%;
+}
+
+.results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#detailsContainer {
+    width: 400px;
 }
