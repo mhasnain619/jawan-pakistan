@@ -1,12 +1,12 @@
 // Object Methods
 
-let obj = {
-    name: "Hasnain",
-    class: "Web And App",
-    age: "22",
-    city: "Karachi"
+// let obj = {
+//     name: "Hasnain",
+//     class: "Web And App",
+//     age: "22",
+//     city: "Karachi"
 
-}
+// }
 // console.log(Object.keys(obj));
 
 
@@ -110,16 +110,35 @@ let obj = {
 // }
 // sum(20, 34, 45, 56, 67, 34, 45, 65)
 
-let newStore = 0
-function sumNum(a, b, ...rest) {
-    for (let i = 0; i < rest.length; i++) {
-        newStore += rest[i]
-    }
-    console.log(newStore);
+// let newStore;
+// function sumNum(a, b, ...rest) {
+//     for (let i = 0; i < rest.length; i++) {
+//         newStore += rest[i]
+//     }
+//     console.log(newStore);
 
-}
+// }
 
-sumNum(23, 34, 454, 565, 232, 23)
+
+// sumNum(23, 34, 454, 565, 232, 23)
+
+
+//Spread Operator
+
+// let arr1 = ['y', 12]
+// let arr2 = ['23', 2122]
+
+// let arr3 = [...arr1, ...arr2]
+// console.log(arr3);
+
+
+// Destructing of Array
+
+
+let [name, num, status, obj] = ['abc', 50, true, { id: 1, status: false }]
+console.log(obj);
+
+
 
 
 
