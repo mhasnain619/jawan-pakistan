@@ -84,11 +84,42 @@ let obj = {
 // let exp8 = 'hello' + --a || null && --b + 10 * 3
 // console.log(exp8);
 
+// default perameters
+
+// function sum(a = 2, b = 2) {
+//     console.log(a + b);
+
+// }
+// sum()
+// function myName(a, b, c = 90) {
+//     console.log(a, b, c);
+//     console.log(a + b + c);
+
+// }
+// myName(78, 87)
 
 
+// Rest Operators
+// let store = 0
+// function sum(a, b, ...rest) {
+//     for (let i = 0; i < rest.length; i++) {
+//         store += rest[i]
+//     }
+//     console.log(a + b + store);
 
+// }
+// sum(20, 34, 45, 56, 67, 34, 45, 65)
 
+let newStore = 0
+function sumNum(a, b, ...rest) {
+    for (let i = 0; i < rest.length; i++) {
+        newStore += rest[i]
+    }
+    console.log(newStore);
 
+}
+
+sumNum(23, 34, 454, 565, 232, 23)
 
 
 
