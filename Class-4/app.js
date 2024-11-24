@@ -28,7 +28,7 @@ let obj1 = {
         street: '123 Main St',
         city: 'Anytown',
         state: 'CA',
-        zip: '12345'
+        zip: '12345',
     }
 }
 let obj2 = { ...obj1, address: { ...obj1.address } };

@@ -650,8 +650,7 @@ function selectBrand() {
         let selectedModel = models.value
 
         let getData = mobiles[selectedBrandValue][selectedModel]
-        brandNames.value = ''
-        models.value = ''
+
         console.log(getData);
     })
 
