@@ -644,11 +644,14 @@ function selectBrand() {
     for (let i = 0; i < selectedModel.length; i++) {
         models.innerHTML += `<option value='${selectedModel[i]}'>${selectedModel[i]}</option>`
     }
+
     getInfo.addEventListener("click", function () {
         let selectedBrandValue = brandNames.value
         let selectedModel = models.value
 
         let getData = mobiles[selectedBrandValue][selectedModel]
+        brandNames.value = ''
+        models.value = ''
         console.log(getData);
     })
 
