@@ -135,11 +135,63 @@
 // Destructing of Array
 
 
-let [name, num, status, obj] = ['abc', 50, true, { id: 1, status: false }]
-console.log(obj);
+// let [name, num, status, obj] = ['abc', 50, true, { id: 1, status: false }]
+// console.log(obj);
 
 
 
+// let arr = [
+//     {
+//         id: 1,
+//         name: 'abc',
+//         status: true
+//     },
+//     {
+//         id: 2,
+//         name: 'abc',
+//         status: true
+//     },
+//     {
+//         id: 3,
+//         name: 'abc',
+//         status: true
+//     },
+//     {
+//         id: 4,
+//         name: 'abc',
+//         status: true
+//     },
+//     {
+//         id: 5,
+//         name: 'abc',
+//         status: true
+//     },
+//     {
+//         id: 6,
+//         name: 'abc',
+//         status: true
+//     },
+//     {
+//         id: 6,
+//         name: 'abc',
+//         status: true
+//     },
+// ]
+
+// let [obj1, obj2, onj3, obj4, obj5] = arr
+// console.log(obj1.name);
 
 
+// Object Destructing
 
+let { id, name, city, education } = {
+    name: 'Anaintay',
+    age: 25,
+    city: "karachi",
+    education: {
+        CGPA: 4,
+        Uni: "FUUAST"
+    }
+}
+let { CGPA, Uni } = education
+console.log(CGPA, Uni);
