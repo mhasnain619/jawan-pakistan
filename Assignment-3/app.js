@@ -144,9 +144,19 @@
 // let exp14 = (false + 'abc') * 2 || (--a + 1) * 'start' + 3 && 4 || 'end';
 // //let exp14 = nan
 // // let exp14 = end
-
 // console.log(exp14);
 
+// Q-15
+// let a = 3
+// let exp15 = (0 + 'foo') * 3 + (true && 'result') || 'start' + (++a + 1) * 4;
+// let exp15 = (nan ) + result || start + 16
+// let exp15 = nanresult
+// console.log(exp15);
 
 
-
+// Q-16
+let a = 2
+let exp16 = 2 * 'end' || (false && true) || 'start' + (--a + 2) * 5 && null;
+// let exp16 = nan || start + 10
+// let exp16 = nanstart + 10
+console.log(exp16);
