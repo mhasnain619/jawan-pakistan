@@ -211,9 +211,31 @@
 // console.log(exp24);
 
 // Q-25
-let a = 2
-let exp25 = (3 + 4) * (false || a--) && 5 || 'start' + 1 + 'test' && 0;
-//let exp25 = (7) * (2) && 
+
+// let a = 2;
+// let exp25 = (3 + 4) * (false || a--) && 5 || 'start' + 1 + 'test' && 0;
+// let exp25 = 7 * 2 && 5 || 'start1test' && 0;
+// let exp25 = 14 && 5 || 0;
+// let exp25 = 5 || 0;
+// let exp25 = 5;
+// console.log(exp25);
+
+// Q-26
+// let a = 3
+// let exp26 = 'hello' && 3 * 2 + (a++ + 1) || (false + true) * 'result' + 'end';
+//let exp26 = hello && 6 + (4) || nanend
+// let exp26 = 10
+// console.log(exp26);
+
+// Q-27
+// let a = 3
+// let exp27 = 3 * 'test' + (true + 2) && (false || 'value') || 'start' + a++;
+//let exp27 = nan + (3) && ('value') || start3
+// let exp27 = nan3 && 'value' || 'start3'
+// let exp27 = 'start3'
+// console.log(exp27);
+
+
 
 
 
