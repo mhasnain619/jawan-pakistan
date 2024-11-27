@@ -291,3 +291,52 @@
 // let exp35 = 'start' && (a-- || 'test') * 4 + 5 && (false + 'end') || 2;
 //let exp35 = 'start'&& (4)
 // console.log(exp35);
+
+
+// 36.
+// let a = 4
+// let exp36 = 1 + 'value' && (++a + 2) || (3 + 'result') * true && 4;
+//let exp36 = 1value && (7) || (3result) * 1 && 4
+// let exp36 = 7
+// console.log(exp36);
+
+
+// 37
+// let exp37 = 'hello' && 2 + 'test' || (++a + 3) && (true + 'value') + 1;
+// let exp37 = 2test
+// console.log(exp37);
+
+
+// 38.
+// let a = 1
+// let exp38 = 5 * (a-- || 'test') && 6 * 'result' || 2 + 'end';
+//let exp38 = 5 * (test) && 2end
+// let exp38 = 2end
+// console.log(exp38);
+
+// 39.
+// let exp39 = 'start' && (false + 1) * 2 || 3 + 4 * 'hello' + 5 && 0;
+//let exp39 = start && (2)
+// let exp39 = 2
+// console.log(exp39);
+
+// 40.
+// let a = 9
+// let exp40 = (false || 'test') * 5 || 6 + (a-- && 'result') * 4;
+// let exp40 = (test) * 5
+// let exp40 = nan
+// console.log(exp40);
+
+
+// 41.
+// let exp41 = 'start' && (3 + 2) * 'test' + 5 || 4 * (false + 1) && 'hello';
+//let exp21 = hello
+// console.log(exp41);
+
+// 42.
+// let a = 2
+// let exp42 = 1 + 2 * 'end' || (false + 3) && 'result' * 4 + a--;
+// let exp42 = nan
+// console.log(exp42);
+
+
