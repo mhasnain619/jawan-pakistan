@@ -260,8 +260,34 @@
 // console.log(exp30);
 
 // Q-31
-let exp31 = 3 + 'end' || 2 * 'test' && (++a + true) || 'start' + 1;
-// let exp31 = 
+// let exp31 = 3 + 'end' || 2 * 'test' && (++a + true) || 'start' + 1;
+// let exp31 = 3end
+// console.log(exp31);
+
+// Q-32
+
+// let exp32 = (0 + 3) * (true + false) || 5 * 'hello' + 2 && (false + 'test');
+//let exp32 = 3
+// console.log(exp32);
+
+// Q-33
+// let a = 4
+// let exp33 = 2 + 3 && ('end' + a++) || (false + 'test') * 4 && 5;
+//let exp33 = end4
+// console.log(exp33);
+
+
+// 34.
+// let a = 4
+// let exp34 = 'hello' + 4 * (false + a--) || 3 && 'start' + 1 || (true + 'test');
+//let exp34 = 'hello' + 4*(4)
+// let exp34 = hello16
+// console.log(exp34);
 
 
 
+// 35.
+// let a = 4
+// let exp35 = 'start' && (a-- || 'test') * 4 + 5 && (false + 'end') || 2;
+//let exp35 = 'start'&& (4)
+// console.log(exp35);
