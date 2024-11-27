@@ -340,3 +340,63 @@
 // console.log(exp42);
 
 
+// 43.
+// let a = 2
+// let exp43 = (false && a--) || 4 * (3 + 2) && 'start' + 5;
+// let exp43 = start5
+// console.log(exp43);
+
+// 44.
+// let a = 2
+// let exp44 = 3 + 2 * (true + 5) && 'value' + 1 || (++a + 2) + 'test';
+// let exp44 = value1
+// console.log(exp44);
+
+// 45.
+// let a = 4
+// let exp45 = (false || 1) + ' test ' && 5 + (3 * a--) || ' end ' + 2;
+//let exp45 = 1test && 17 || end2
+// let exp45 = 17
+// console.log(exp45);
+
+// 46.
+// let a = 4
+// let exp46 = (2 * a-- + 4) && ' test ' || 3 + ' hello ' && (false + 1) * 5;
+//let exp46 = (16) && 'test' || 3hello && (5)
+// let exp46 = test
+// console.log(exp46);
+
+// // 47.
+// let a = 4
+// let exp47 = 0 + 'result' && (3 + 1) * 2 || (false + a--) * 'end';
+//let exp47 = 0result && 4 || nan
+// let exp47 = 0result && 8 || nan
+// let exp47 = 8
+// console.log(exp47);
+
+
+// // 48.
+// let a = 4
+// let exp48 = (false || 1) * ' test ' && 4 || (true + 2) * ' hello ' + a--;
+//let exp48 = nan && 4 || nan4
+// let exp48 = nan
+// console.log(exp48);
+
+
+// 49.
+// let a = 4
+// let exp49 = (2 * 3) + ' result ' && 4 * (a-- + 1) || ' start ' + 2 + ' end ';
+//let exp49 = 6result && 20 || start2end
+// let exp49 = 20
+// console.log(exp49);
+
+
+// 50.
+// let a = 4
+// let exp50 = 32 && true - ++a && ' ' || ' true ';
+// let exp50 = true - 5 && ' ' || true
+// let exp50 = 4 && '' || 'true'
+// let exp50 = ''
+// console.log(exp50);
+
+
