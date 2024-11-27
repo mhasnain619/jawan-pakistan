@@ -155,8 +155,67 @@
 
 
 // Q-16
-let a = 2
-let exp16 = 2 * 'end' || (false && true) || 'start' + (--a + 2) * 5 && null;
+// let a = 2
+// let exp16 = 2 * 'end' || (false && true) || 'start' + (--a + 2) * 5 && null;
 // let exp16 = nan || start + 10
 // let exp16 = nanstart + 10
-console.log(exp16);
+// console.log(exp16);
+
+// Q-17
+// let a = 2
+// let exp17 = 3 + 2 * ('test' + a--) && (false + 3) * 5 || 0 + 'value' && 4;
+// let exp17 = 5 * (2test) && (15) || 0value && 4
+// let exp17 = 4
+// console.log(exp17);
+
+// Q-19
+// let a = 10
+// let exp18 = 'start' && (false || 2 * 'end') || (++a + 1) * 3 + 'result' && 0;
+// let exp18 = start || (nan) || 12result && 0
+// let exp18 = 0
+// console.log(exp18);
+
+// Q-20
+// let a = 10
+// let exp20 = 2 * 3 + 'hello' && (false + ++a) * 'result' || 'end' + 5 || 0;
+// let exp20 = 6hello && (nan) || end5
+// let exp20 = end5
+// console.log(exp20);
+
+// Q-21
+// let a = 10
+// let exp21 = 5 * (true + ++a) && ('test' + false) || 7 * (true + 2) + 'value';
+// let exp21 = nan && test
+// let exp21 = test
+// console.log(exp21);
+
+// Q-22
+// let a = 2
+// let exp22 = 'foo' + 4 && (++a + 1) * 'start' || 5 + 6 * (false + true) && 'test';
+//let exp22 = foo4 || 11 && 'tesst'
+// let exp2 = test
+// console.log(exp22);
+
+// Q-23
+// let a = 2
+// let exp23 = (false && 2) || (a++ + 1) * 'end' && 'start' || 4 * 5 && 'result';
+//let exp23 = 0 || nan && 'start || 20 && 'result
+// let exp23 = 'result'
+// console.log(exp23);
+
+// Q-24
+// let a = 2
+// let exp24 = 3 + 2 * 'test' || (false + a--) * 'hello' && 'world' + 1 || 2;
+// let exp24 = nan || nan && 'world1 || 2
+// let exp24 = 2
+// console.log(exp24);
+
+// Q-25
+let a = 2
+let exp25 = (3 + 4) * (false || a--) && 5 || 'start' + 1 + 'test' && 0;
+//let exp25 = (7) * (2) && 
+
+
+
+
+
