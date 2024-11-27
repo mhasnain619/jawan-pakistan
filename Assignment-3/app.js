@@ -236,8 +236,32 @@
 // console.log(exp27);
 
 
+// Q-28
+// let a = 3
+// let exp28 = (false + 1) * 'hello' || 3 + (a-- && 5) * 'result' || 'world';
+//let exp28 = nan || 3 + (nan) || 'world'
+// let exp28 = nan || 3nan || 'world'
+// let exp28 = 'world'
+// console.log(exp28);
 
 
+// Q-29
+// let exp29 = 'start' + 2 * (true || 1) && (false || 'value') * 5 + 'result';
+// let exp29 = 'start' + 2 (1) && (0)* 5result
+// let exp29 = 'start' + 2 * 1 && 0result
+// let exp29 = nan
+// console.log(exp29);
+
+// Q-30
+// let a = 3
+// let exp30 = (true + 3) * 'test' || 1 * 5 && (false + 'value') + 'end' || a--;
+// let exp30 = 4test || 5 && '0valueend' ||  3
+// let exp30 =  0valueend
+// console.log(exp30);
+
+// Q-31
+let exp31 = 3 + 'end' || 2 * 'test' && (++a + true) || 'start' + 1;
+// let exp31 = 
 
 
 
