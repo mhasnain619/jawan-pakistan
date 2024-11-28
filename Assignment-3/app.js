@@ -494,4 +494,70 @@
 // console.log(exp60);
 
 
+// 61.
+// let a = 4
+// let exp61 = 3 + (++a + ' result ') || (a-- + 2) * ' test ' + 5;
+// let exp61 = 3 + (5result) || (6) * test5
+// let exp61 = 35result || nan
+// let exp61 = 35result
+// console.log(exp61);
+
+
+
+// 62.
+// let a = 4
+// let exp62 = ' start ' + (a-- + ' test ') * 3 || (false && 4) * ' end ' + 5;
+// let exp62 = start + (4test) * 3 || (0) * end5
+// let exp62 = start + nan || nan
+// let exp62 = start nan
+// console.log(exp62);
+
+
+// // 63.
+// let a = 4;
+// let exp63 = (++a + 2) * ' test ' || ' value ' + (a-- + 3) * ' result ';
+//let exp63 = (7) * 'test' || 'value' + (7) * 'result'
+// let exp63 = nan || value + nan
+// let exp63 = value nan
+// console.log(exp63);
+
+
+
+
+// // 64.
+// let a = 4;
+// let exp64 = 5 * 'end ' + (a-- + 1) * ' test ' || ' start ' + (false && ' result ');
+// let exp64 = nan + (5) * 'test' || 'start' + (0)
+// let exp64 = nan + nan || start0
+// let exp64 =start0
+// console.log(exp64);
+
+
+
+// // 65.
+// let a = 4;
+// let exp65 = ' value ' + 3 * (a-- + ' test ') || (false + 1) * ' end ';
+// let exp65 = value + * (nan) || (1) * 'end'
+// let exp65 = value nan
+// console.log(exp65);
+// // 66.
+// let exp66 = (++a + ' test ') * 2 || (a-- + 1) * ' start ' + ' result ';
+// // 67.
+// let exp67 = ' start ' + (a-- + 3) * ' end ' || (++a + ' test ') * 5;
+// // 68.
+// let exp68 = 2 * (a-- + 1) + ' result ' || (false && ' start ') * 3;
+// // 69.
+// let exp69 = 4 + (a-- + ' test ') * 5 || (false + 2) * ' start ';
+// // 70.
+// let exp70 = (a-- + 2) * ' result ' || (false && ' end ') + 3;
+// // 71.
+// let exp71 = ' test ' + 2 * (a-- + 3) || (false && ' start ') + 4;
+// // 72.
+// let exp72 = 3 * (a-- + ' value ') || (false + 2) * ' test ';
+// // 73.
+// let exp73 = (a-- + ' test ') * 4 || (false + 1) * ' result ' + ' start ';
+// // 74.
+// let exp74 = (++a + 5) * ' end ' || (a-- + 2) * ' result ' + ' start ';
+// // 75.
+// let exp75 = (3 * ' test ') + (a-- + ' start ') || (false + 1) * ' result ';
 
