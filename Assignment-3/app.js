@@ -426,3 +426,72 @@
 // let exp53 = startend
 // console.log(exp53);
 
+
+
+// 54.
+// let a = 4
+// let exp54 = (a-- + 2) * ' result ' || (false && 5) * ' test ' + 4;
+//let exp54 = (6) * 'RESULT' || (0) * test4
+// let exp54 = nan || nan
+// let exp54 = nan
+// console.log(exp54);
+
+
+
+// 55.
+// let a = 4
+// let exp55 = ' start ' + 5 * (a-- + ' test ') || (false + 2) * ' value ';
+// let exp55 = start + nan || nan
+// let exp55 = nan
+// console.log(exp55);
+
+
+
+// 56.
+// let a = 4
+// let exp56 = 4 * (a-- + 1) + ' test ' || (++a + 3) * ' start ' + 5;
+// let exp56 = 20test || nan
+// let exp56 = 20test
+// console.log(exp56);
+
+
+
+// 57.
+// let a = 4
+// let exp57 = (3 * 'test' + 1) || (++a && a--) * 'result' || 'value';
+//let exp 57 = (nan1) || (4) * result || value
+// let exp57 = value
+// console.log(exp57);
+
+
+
+// 58.
+// let a = 4
+// let exp58 = (a-- + ' start ') * ' result ' || (false + 2) + ' end ' + 3;
+// let exp58 =(4start) * 'result || (2) + end3
+// let exp58 = nan || 2end3
+// let exp58 = 2end3
+// console.log(exp58);
+
+
+
+// 59.
+// let a = 4
+// let exp59 = 5 * (a-- + 3) * ' test ' || (false && ' start ') + 2;
+// let exp59  = 5 * (7) * 'test' || (0 && 'start') + 2
+// let exp59 = nan || 2
+// let exp59 = 2
+// console.log(exp59);
+
+
+
+// 60.
+// let a = 4
+// let exp60 = (a-- + ' value ') * ' test ' + 4 || (false + 2) * ' end ';
+// let exp60 = (4value) * 'test4' || (2) * end
+// let exp60 = nan || nan
+// let exp60 = nan
+// console.log(exp60);
+
+
+
