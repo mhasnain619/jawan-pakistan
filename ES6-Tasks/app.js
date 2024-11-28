@@ -118,3 +118,68 @@
 
 
 // .................Re - declaration:.................
+
+
+// Try to declare the same variable name twice using var.
+
+// var myName = 'hasnain'
+// console.log(myName);
+// var myName = 'Anainty'
+// console.log(myName);
+
+// var allow me to redeclare the same variable
+
+
+// Try to declare the same variable name twice using let.
+
+
+// let myName = 'hasnain'
+// console.log(myName);
+// let myName = 'Anainty'
+// console.log(myName);
+
+// const myName = 'hasnain'
+// console.log(myName);
+// const myName = 'anaintay'
+// console.log(myName);
+
+// let and const give us a error that myName is already been declared
+
+
+// .............Re - assignment:..............
+
+// Declare a variable using var and assign it a value.Then reassign it a
+// new value.
+
+// var myName = 'hasnain'
+// myName = 'anaintay'
+// console.log(myName);
+
+// Declare a variable using let and assign it a value.Then reassign it a
+// new value.
+
+// let myName = 'hasnain'
+// myName = 'anaintay'
+// console.log(myName);
+
+
+// Declare a variable using const and assign it a value.Then reassign it
+// a new value.
+
+// const myName = 'hasnain'
+// myName = 'anaintay'
+// console.log(myName);
+
+// in var and let we can easily reassign a value but in const we cannot reassign because its value is fixed
+
+
+
+// .....................Temporal Dead Zone(TDZ):................
+
+// Declare a let variable inside a block but try to log it before the
+// declaration.
+{
+    console.log(myName);
+    var myName = 'hasnain';
+    console.log(myName);
+}
