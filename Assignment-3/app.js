@@ -400,3 +400,29 @@
 // console.log(exp50);
 
 
+// 51.
+// let a = 4
+// let exp51 = (5 + 2) * (a-- + 1) || 'start' + (++a + 'end') * 3;
+// let exp51 = (7) * (5) || 'start' + (nan)
+// let exp51 = 35 || 'start' + (nan)
+// let exp51 = 35
+// console.log(exp51);
+
+
+// 52.
+// let a = 4
+// let exp52 = (++a && 3) * 'test' || 4 + 'start' * (a-- + 'result');
+// let exp52 = (5 && 3) * 'test' || 4 + nan
+// let exp52 = (5) || 4 + nan
+// let exp52 = nan
+// console.log(exp52);
+
+
+// 53.
+// let a = 4
+// let exp53 = 3 + 'value' * (++a + 1) || (a-- && 'start') + 'end';
+//let exp53 = 3value * (6) || (4 && 'start') +'end'
+//let exp53 = nan || startend
+// let exp53 = startend
+// console.log(exp53);
+
