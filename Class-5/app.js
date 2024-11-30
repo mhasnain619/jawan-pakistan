@@ -140,3 +140,11 @@
 //     return 10;
 // })
 // console.log(num2);
+
+
+
+// let num = [1, 2, 3, 4, 4, 56, 67, 788, 342, 212, 343, 67, 88, 45, 21]
+// let newNum = num.map((e, i) => {
+//     return e + 10
+// })
+// console.log(newNum);
