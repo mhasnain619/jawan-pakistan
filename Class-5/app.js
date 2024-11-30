@@ -144,7 +144,37 @@
 
 
 // let num = [1, 2, 3, 4, 4, 56, 67, 788, 342, 212, 343, 67, 88, 45, 21]
+
+
 // let newNum = num.map((e, i) => {
 //     return e + 10
 // })
 // console.log(newNum);
+
+//.....................some.............//
+
+// let num = [1, 2, 3, 4,]
+// let Arr = num.some((e, i) => {
+//     return e == 5
+// })
+// console.log(Arr);
+
+//..........every...............//
+
+// let num = [5, 5, 5, 5]
+// let Arr = num.every((e, i) => {
+//     return e == 5
+// })
+// console.log(Arr);
+
+//........................Reduce.................//
+
+let num = [{ num: 1 }, { num: 2 }, { num: 3 }]
+
+
+let newNum = num.reduce((ele1, ele2) => {
+    return ele1 + ele2.num
+    // return { num: ele1.num + ele2.num }
+
+}, 10)
+console.log(newNum);
