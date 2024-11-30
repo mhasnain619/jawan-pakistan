@@ -78,15 +78,29 @@
 
 
 // Array Methods
+//.....................................Map........................//
+
 // Map method return new array krta ha agr map method k ander return keyword use hva h to
+
+// let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// let namee1 = arr1.map((element, index) => {
+//     return 'Anaintay'
+// })
+// console.log(namee1);
+
+//.....................................forEach........................//
+
+
 //agr forEach k ander return keyWork likho gy to new array return ni krta
 
 // let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-// let namee = arr.map((element, index) => {
-//     return 'Anaintay'
+// let namee = arr.forEach((element, index) => {
+//     return 10
 // })
 // console.log(namee);
 
+
+//.....................................filter........................//
 
 // let arr = [23, 1, 2, 3, 4, 5, 6, 7, 8, 9, 3432, 2342, 345, 32312, 122, 345]
 // let namee = arr.filter((element, index) => {
@@ -118,3 +132,11 @@
 //     return e == 'Islamabad'
 // })
 // console.log(cityName);
+
+
+
+// let num = [1, 2, 3, 4, 5, 6, 7, 3, 23]
+// let num2 = num.forEach((element, index) => {
+//     return 10;
+// })
+// console.log(num2);
