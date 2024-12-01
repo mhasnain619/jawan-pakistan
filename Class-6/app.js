@@ -172,24 +172,131 @@
 // })
 
 
-let userInput = +prompt('Enter your number to generate a table')
-let range = +prompt('Enter your Range')
-let defaultNum = 5
+// let userInput = +prompt('Enter your number to generate a table')
+// let range = +prompt('Enter your Range')
+// let defaultNum = 5
 
-let calculate = new Promise((res, rej) => {
-    if (userInput) {
-        res(userInput)
-    }
-    else {
-        rej(defaultNum)
-    }
+// let calculate = new Promise((res, rej) => {
+//     if (userInput) {
+//         res(userInput)
+//     }
+//     else {
+//         rej(defaultNum)
+//     }
+// })
+// calculate.then((data) => {
+//     for (let i = 1; i <= range; i++) {
+//         document.write(`${data} x ${i} = ${data * i} </br>`)
+//     }
+// }).catch((err) => {
+//     for (let j = 1; j <= range; j++) {
+//         document.write(`${err} x ${j} = ${err * j} </br>`)
+//     }
+// })
+
+
+// let num = +prompt('Enter your number to generate table')
+// let range = +prompt('Enter your range')
+// let defaultNum = 2
+// let newTable = new Promise((req, res) => {
+//     if (num) {
+//         res(num)
+//     } else {
+//         req(defaultNum)
+//     }
+// })
+// newTable.then((data) => {
+//     for (let i = 1; i <= range; i++) {
+//         document.write(`${data} X ${i} = ${data * i} </br>`)
+//     }
+// }).catch((err) => {
+//     for (let i = 1; i <= range; i++) {
+//         document.write(`${err} X ${i} = ${err * i} </br>`)
+//     }
+// })
+
+
+
+
+//.........................API........................//
+// let getData = fetch('https://jsonplaceholder.typicode.com/posts').then((reponse) => {
+//     return reponse.json()
+// })
+//     .then((data) => {
+//         console.log(data);
+//     }).catch((err) => {
+//         console.log(err)
+//     })
+
+
+// let newData = new Promise((res, req) => {
+//     fetch('https://jsonplaceholder.typicode.com/posts').then((reponse) => {
+//         return reponse.json()
+//     }).then((data) => {
+//         res(data)
+//     }).then((err) => {
+//         req(err)
+//     })
+// }).then((response) => {
+//     console.log(response);
+// })
+
+
+// let getData = async () => {
+//     try {
+//         let data = await fetch('https://jsonplaceholder.typicode.com/photos')
+//         let response = await data.json()
+//         let container = document.createElement('div')
+//         document.body.appendChild(container)
+//         response.slice(0, 10).forEach(photo => {
+//             let img = document.createElement('img')
+//             img.src = photo.thumbnailUrl
+//             img.alt = photo.title;
+//             img.style.margin = '10px';
+//             img.style.width = '150px'; // Set image width
+//             img.style.height = '150px'
+//             container.appendChild(img)
+//         });
+//         console.log(response);
+//     } catch (error) {
+//         console.log('failed to get data', error.message);
+//     }
+// }
+// getData()
+
+
+// let getData = fetch('https://jsonplaceholder.typicode.com/posts').then((response) => {
+//     return response.json()
+// }).then((data) => {
+//     console.log(data);
+// }).catch((err) => {
+//     console.log(err)
+// })
+
+
+//.........................API........................//
+// let getData = fetch('https://jsonplaceholder.typicode.com/posts').then((reponse) => {
+//     return reponse.json()
+// })
+//     .then((data) => {
+//         console.log(data);
+//     }).catch((err) => {
+//         console.log(err)
+//     })
+
+
+let newData = new Promise((resolve, reject) => {
+    fetch('https://jsonplaceholder.typicode.com/posts').then((response) => {
+        return response.json()
+    }).then((data) => {
+        resolve(data)
+    }).catch((err) => {
+        reject(err)
+    })
 })
-calculate.then((data) => {
-    for (let i = 1; i <= range; i++) {
-        document.write(`${data} x ${i} = ${data * i} </br>`)
-    }
+newData.then((data) => {
+    console.log(data)
 }).catch((err) => {
-    for (let j = 1; j <= range; j++) {
-        document.write(`${err} x ${j} = ${err * j} </br>`)
-    }
+    console.log('faile to get data ', err.message)
 })
+
