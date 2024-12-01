@@ -169,12 +169,40 @@
 
 //........................Reduce.................//
 
-let num = [{ num: 1 }, { num: 2 }, { num: 3 }]
+// let num = [{ num: 1 }, { num: 2 }, { num: 3 }]
 
 
-let newNum = num.reduce((ele1, ele2) => {
-    return ele1 + ele2.num
-    // return { num: ele1.num + ele2.num }
+// let newNum = num.reduce((ele1, ele2) => {
+//     return ele1 + ele2.num
+//     // return { num: ele1.num + ele2.num }
 
-}, 10)
-console.log(newNum);
+// }, 10)
+// console.log(newNum);
+
+
+const array = [
+    42,
+    true,
+    'hello world',
+    {
+        name: "jhon",
+        age: 25,
+        isStudent: false,
+    },
+    false,
+    3.14,
+    'Javascript is fun!'
+]
+
+// let newArr = array.map((e, i) => {
+//     return e
+// })
+// console.log(newArr);
+
+//..................filter Numbers..........//
+
+// let newArr = array.filter((e, i) => {
+//     return typeof e == 'number'
+// })
+// console.log(newArr);
+
