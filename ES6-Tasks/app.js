@@ -237,3 +237,37 @@
 // `
 // console.log(address);
 
+//..................Simple Expressions:......................//
+
+// let num1 = 200
+// let num2 = 100
+
+// let newNum = `${num1 + num2}`
+// console.log(newNum);
+
+
+//................Function Calls:......................//
+
+// function sum(a, b) {
+//     return `${a * b}`
+// }
+
+// let num1 = 200
+// let num2 = 100
+// console.log(`the product of ${num1} and ${num2} is ${sum(num1, num2)}`);
+
+
+//..............Creating a Tagged Template:.....................//
+
+function tagedFunc(strings, ...values) {
+
+    console.log(strings);
+    console.log(values);
+    return strings.join("") + values.join("");
+
+}
+
+const name = 'hasnain'
+const age = 20
+const result = tagedFunc`my name is ${name} and I am ${age} years old.`
+console.log('result : ', result);
