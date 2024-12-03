@@ -259,15 +259,34 @@
 
 //..............Creating a Tagged Template:.....................//
 
-function tagedFunc(strings, ...values) {
+// function tagedFunc(strings, ...values) {
 
-    console.log(strings);
-    console.log(values);
-    return strings.join("") + values.join("");
+//     console.log(strings);
+//     console.log(values);
+//     return strings.join("") + values.join("");
 
-}
+// }
 
-const name = 'hasnain'
-const age = 20
-const result = tagedFunc`my name is ${name} and I am ${age} years old.`
-console.log('result : ', result);
+// const name = 'hasnain'
+// const age = 20
+// const result = tagedFunc`my name is ${name} and I am ${age} years old.`
+// console.log('result : ', result);
+
+
+// const currentHour = new Date().getHours();
+// console.log(`The current hour is ${currentHour}.`);
+
+// const msg = `Good ${currentHour < 12 ? 'Morning' : 'AfterNoon'}`
+// console.log(msg);
+
+
+//.......................Loops within Template Literals:...............//
+
+const shoppingList = ["Apples", "Bread", "Milk", "Eggs", "Cheese"];
+
+let list = `
+<ul>
+${shoppingList.map(item => `<li>${item}</li>`).join('')}
+</ul>
+`
+document.write(list)
