@@ -178,8 +178,62 @@
 
 // Declare a let variable inside a block but try to log it before the
 // declaration.
-{
-    console.log(myName);
-    var myName = 'hasnain';
-    console.log(myName);
-}
+// {
+//     console.log(myName);
+//     var myName = 'hasnain';
+//     console.log(myName);
+// }
+
+// {
+//     console.log(myName);
+//     let myName = 'hasnain';
+//     console.log(myName);
+// }
+
+// {
+//     console.log(myName);
+//     const myName = 'hasnain';
+//     console.log(myName);
+// }
+
+//.................When to use var, let, and const:.................//
+// let cities = ['karachi', 'lahore', 'islamabad']
+// function foo() {
+//     for (var i = 0; i <= cities.length; i++) {
+//         console.log(i);
+//     }
+// }
+// foo();
+
+
+// for (let i = 0; i < 5; i++) {
+//     setTimeout(() => {
+//         console.log(i);
+//     }, 1000)
+// }
+
+
+// const users = ['hasnain', 'ali', 'abbas']
+// for (let i = 0; i < users.length; i++) {
+//     setTimeout(() => {
+//         console.log(users[i]);
+//     }, 2000)
+// }
+
+//.....................String Interpolation:...................//
+
+
+// let firstName = 'Muhammad'
+// let lastName = 'Hasnain'
+
+// console.log(`${firstName} ${lastName}`);
+
+//............Multi-line Strings:...............//
+
+// let address = `
+// M hasnain
+// 123, main road
+// karachi
+// `
+// console.log(address);
+
