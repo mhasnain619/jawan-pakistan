@@ -282,11 +282,72 @@
 
 //.......................Loops within Template Literals:...............//
 
-const shoppingList = ["Apples", "Bread", "Milk", "Eggs", "Cheese"];
+// const shoppingList = ["Apples", "Bread", "Milk", "Eggs", "Cheese"];
 
-let list = `
-<ul>
-${shoppingList.map(item => `<li>${item}</li>`).join('')}
-</ul>
-`
-document.write(list)
+// let list = `
+// <ul>
+// ${shoppingList.map(item => `<li>${item}</li>`).join('')}
+// </ul>
+// `
+// document.write(list)
+
+//......................Escaping Backticks:....................//
+
+// let str = `this is a string with backtick: \``
+// console.log(str);
+
+
+//...............Simple Condition:...............//
+
+// let age = 4
+
+// let vote = age > 18 ? 'canVote' : 'No'
+// console.log(vote);
+
+
+
+//................Even or Odd:..............//
+
+// let number = +prompt('Enter your number')
+// let result = number % 2 === 0 ? 'Even' : 'Odd'
+// console.log(result)
+
+//...................Grade Evaluation:.........................//
+
+// let yourGrade = +prompt('Enter your scored number')
+// let grade = yourGrade >= 90 && yourGrade < 100 ? 'Grade A' :
+//     yourGrade >= 80 && yourGrade <= 90 ? 'Grade B' :
+//         yourGrade >= 70 && yourGrade <= 80 ? 'Grade c' :
+//             yourGrade >= 60 && yourGrade <= 70 ? "Grade D" : 'Fail'
+// console.log(grade)
+
+
+//.............Login Status:.................//
+
+// let isLogedIn = true
+// let statusMessage = isLogedIn ? 'Wellcome Back..!' : 'Please log in'
+// console.log(statusMessage);
+
+
+// let isMember = true
+// let purchaceAmount = 100
+// let discount = isMember && purchaceAmount <= 100 ? 'discount the value 10%' : '0'
+// console.log(discount)
+
+
+
+//.............Determine Max Value:...............//
+
+// function maxValue(a, b) {
+//     return a > b ? a : b
+// }
+// console.log(maxValue(10, 0))
+
+
+//..................Greeting Message:..................//
+
+// function greet(name) {
+//     return name ? `Hello, ${name}! ` : 'Hello, Guest'
+// }
+// console.log(greet('Hasnain'))
+// console.log(greet(''))
