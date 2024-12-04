@@ -351,3 +351,54 @@
 // }
 // console.log(greet('Hasnain'))
 // console.log(greet(''))
+
+
+//................Mapping Values:..................//
+
+
+
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+// let newNumbers = numbers.map(num => (num % 2 === 0 ? num * 2 : num * 3))
+// console.log(newNumbers);
+
+
+
+//...................Filtering Values:..................//
+
+
+// const fruits = ["apple", "banana", "cherry", "date", "elderberry", "fig", "grape"];
+
+// let newFruits = fruits.filter(word => (word.length === 3 ? true : false))
+// console.log(newFruits);
+
+
+//...............Copying an Array:................//
+
+//Spread Operator
+
+// let arr1 = ['y', 12]
+// let copiedArray = [...arr1]
+// console.log('original array', arr1);
+
+// console.log('copied array', copiedArray);
+
+
+//....................Merging Arrays:....................///
+
+
+// let arr1 = [1, 2, 3, 4]
+// let arr2 = [5, 6, 7, 8, 9]
+// let margeArray = [...arr1, ...arr2]
+// console.log(margeArray);
+
+
+
+//...............Adding Elements to an Array:................//
+
+
+// let numbers = [5, 6, 7]
+// let startNum = [1, 2, 3, 4]
+// let endNum = [8, 9, 10]
+// let updatedArray = [...startNum, ...numbers, ...endNum]
+// console.log(updatedArray);
