@@ -402,3 +402,71 @@
 // let endNum = [8, 9, 10]
 // let updatedArray = [...startNum, ...numbers, ...endNum]
 // console.log(updatedArray);
+
+
+//.................Copying an Object:....................//
+
+// let originalObject = {
+//     name: "John",
+//     age: 30,
+//     occupation: "Software Engineer",
+//     hobbies: ["reading", "coding", "gaming"]
+// }
+// console.log(originalObject);
+
+// let copiedObject = { ...originalObject }
+// console.log(copiedObject);
+
+
+//..............Merging Objects:.................//
+
+// let obi1 = {
+//     name: "John",
+//     age: 30,
+//     occupation: "Software Engineer",
+// }
+// let obj2 = {
+//     hobbies: ["reading", "coding", "gaming"],
+//     country: "USA"
+// }
+
+// let mergedObject = { ...obi1, ...obj2 }
+// console.log(mergedObject);
+
+
+//..............Updating Object Properties:.................//
+
+// let user = {
+//     name: "John",
+//     age: 30,
+//     occupation: "Software Engineer",
+//     email: 'jhon@gmail.com'
+// }
+// let updatedUser = {
+//     ...user,
+//     email: 'new@gmail.com',
+// }
+// console.log(updatedUser);
+
+
+//................Passing Array Elements as Arguments:................//
+
+
+
+// let num = [1, 2, 3]
+// function sum(a, b, c) {
+//     return a + b + c
+// }
+// console.log(sum(...num));
+
+
+//................Combining Multiple Arrays:.................//
+
+let num1 = [1, 2, 3]
+let num2 = [4, 5, 6]
+let num3 = [7, 8, 9]
+function combineArrays(num1, num2, num3) {
+    return [...num1, ...num2, ...num3]
+}
+
+console.log(combineArrays(num1, num2, num3));
