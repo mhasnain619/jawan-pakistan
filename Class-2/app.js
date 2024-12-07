@@ -123,13 +123,13 @@
 
 /// Object Method
 
-let obj = {
-    name: 'John',
-    age: 25,
-    city: 'karachi'
-}
+// let obj = {
+//     name: 'John',
+//     age: 25,
+//     city: 'karachi'
+// }
 
-console.log(Object.entries(obj));
+// console.log(Object.entries(obj));
 
 
 // solve question 2

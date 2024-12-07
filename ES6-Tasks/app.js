@@ -462,11 +462,27 @@
 
 //................Combining Multiple Arrays:.................//
 
-let num1 = [1, 2, 3]
-let num2 = [4, 5, 6]
-let num3 = [7, 8, 9]
-function combineArrays(num1, num2, num3) {
-    return [...num1, ...num2, ...num3]
+// let num1 = [1, 2, 3]
+// let num2 = [4, 5, 6]
+// let num3 = [7, 8, 9]
+// function combineArrays(num1, num2, num3) {
+//     return [...num1, ...num2, ...num3]
+// }
+
+// console.log(combineArrays(num1, num2, num3));
+
+
+
+function sum(...theArgs) {
+    let total = 0;
+    for (const arg of theArgs) {
+        total += arg;
+    }
+    return total;
 }
 
-console.log(combineArrays(num1, num2, num3));
+console.log(sum(1, 2, 3));
+// Expected output: 6
+
+console.log(sum(1, 2, 3, 4));
+// Expected output: 10
