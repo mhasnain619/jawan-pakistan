@@ -473,16 +473,145 @@
 
 
 
-function sum(...theArgs) {
-    let total = 0;
-    for (const arg of theArgs) {
-        total += arg;
-    }
-    return total;
-}
+// function sum(...theArgs) {
+//     let total = 0;
+//     for (const arg of theArgs) {
+//         total += arg;
+//     }
+//     return total;
+// }
 
-console.log(sum(1, 2, 3));
-// Expected output: 6
+// console.log(sum(1, 2, 3));
+// // Expected output: 6
 
-console.log(sum(1, 2, 3, 4));
+// console.log(sum(1, 2, 3, 4));
 // Expected output: 10
+
+
+// function multilpy(num1, ...num2) {
+//     return num2.map(num => num * num1)
+// }
+// const result = multilpy(2, 3, 4, 5, 6)
+// console.log(result);
+
+
+
+//............Spread Operator with Nested Structures:...............//
+
+// let array = [[12, 2], [3, 4], [5, 6]]
+
+// let copiedArray = [...array]
+// copiedArray[0][0] = 10
+// copiedArray[0].push(10)
+
+// console.log("Original Array:", array);
+// console.log("Copied Array:", copiedArray);
+
+
+//............Sum Function:.............//
+
+// function sum(...number) {
+//     return number.reduce((total, num) => total + num)
+// }
+// console.log(sum(1, 2, 3, 4));
+// console.log(sum(10, 20));
+
+
+//..........Average Function:...........//
+
+// function average(...number) {
+//     let total = number.reduce((total, num) => total + num)
+//     return total / number.length
+
+// }
+// console.log(average(1, 2, 3, 4));
+// console.log(average(10, 20));
+
+
+//........First and Rest:..........//
+
+
+// let numbers = [1, 2, 3, 4, 5]
+
+// let [first, ...rest] = numbers
+
+// console.log(first);
+// console.log(rest);
+
+
+//................Skip and Rest:...........//
+
+// let numbers = ["red", "blue", "green", "yellow",]
+
+// let [, ...rest] = numbers
+
+// // console.log();
+// console.log(rest);
+
+
+//..........Basic Destructuring:...............//
+
+// const { name, email, ...rest } = {
+//     name: "John",
+//     age: 30,
+//     email: 'abc@gmail.com',
+//     address: 'khaplu'
+// }
+// console.log(name);
+// console.log(email);
+// console.log(rest);
+
+
+//.............Nested Destructuring:..............//
+
+// const student = {
+//     name: "John",
+//     id: 12,
+//     grades: 30,
+//     info: {
+//         major: 'Computer Science',
+//         address: 'khaplu'
+//     }
+// }
+
+// const { name, id, info: { major }, ...rest } = {
+//     name: "John",
+//     id: 12,
+//     grades: [30, 40, 45],
+//     info: {
+//         major: 'Computer Science',
+//         address: 'khaplu'
+//     }
+// }
+// console.log(name);
+// console.log(id);
+// console.log(major);
+// console.log(rest);
+
+
+//..........Filter Even Numbers:.................//
+
+// function filterEven(...nums) {
+//     return nums.filter(num => num % 2 === 0);
+// }
+// console.log(filterEven(1, 2, 3, 4, 5,))
+
+
+
+
+//...............Combine and Sort Arrays:..................//
+
+function sortNumbers(...num) {
+
+    let combined = [].concat(...num)
+    return combined.sort((a, b) => a - b);
+
+}
+const result1 = sortNumbers([3, 1, 4], [9, 7, 6], [2, 8, 5]);
+const result2 = sortNumbers([10, 5, 20], [15, 0, 25]);
+const result3 = sortNumbers([30, 20], [10], [50, 40, 60]);
+
+// Log the results
+console.log("Result 1:", result1); // Logs: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+console.log("Result 2:", result2); // Logs: [0, 5, 10, 15, 20, 25]
+console.log("Result 3:", result3); // Logs: [10, 20, 30, 40, 50, 60]
