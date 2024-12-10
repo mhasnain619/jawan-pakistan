@@ -601,17 +601,76 @@
 
 //...............Combine and Sort Arrays:..................//
 
-function sortNumbers(...num) {
+// function sortNumbers(...num) {
 
-    let combined = [].concat(...num)
-    return combined.sort((a, b) => a - b);
+//     let combined = [].concat(...num)
+//     return combined.sort((a, b) => a - b);
 
-}
-const result1 = sortNumbers([3, 1, 4], [9, 7, 6], [2, 8, 5]);
-const result2 = sortNumbers([10, 5, 20], [15, 0, 25]);
-const result3 = sortNumbers([30, 20], [10], [50, 40, 60]);
+// }
+// const result1 = sortNumbers([3, 1, 4], [9, 7, 6], [2, 8, 5]);
+// const result2 = sortNumbers([10, 5, 20], [15, 0, 25]);
+// const result3 = sortNumbers([30, 20], [10], [50, 40, 60]);
 
-// Log the results
-console.log("Result 1:", result1); // Logs: [1, 2, 3, 4, 5, 6, 7, 8, 9]
-console.log("Result 2:", result2); // Logs: [0, 5, 10, 15, 20, 25]
-console.log("Result 3:", result3); // Logs: [10, 20, 30, 40, 50, 60]
+// // Log the results
+// console.log("Result 1:", result1);
+// console.log("Result 2:", result2);
+// console.log("Result 3:", result3);
+
+
+
+//..........Basic Destructuring:.............../
+
+// const fruits = ['apple', 'banana', 'cherry']
+// const [firstFruit, secondFruit, thirdFruit] = fruits
+// console.log(firstFruit);
+// console.log(secondFruit);
+// console.log(thirdFruit);
+
+
+
+//...............Skipping Elements:.............//
+
+
+// const color = ["red", "green", "blue", "yellow"]
+// const [primaryColor, , teritoryColor] = color
+// console.log(primaryColor);
+// console.log(teritoryColor);
+
+
+//..........Rest Operator:...............//
+
+
+// let num = [1, 2, 3, 4, 5]
+// let [num1, ...rest] = num
+// console.log(num1);
+// console.log(rest);
+
+
+//..........Basic Destructuring:................//
+
+// let person = {
+//     name: 'John',
+//     age: 30,
+//     occupation: 'Developer',
+// }
+// let { name, age, occupation } = person
+// console.log(name);
+// console.log(age);
+// console.log(occupation);
+
+
+
+//.............Renaming Variables:.................//
+
+// let car = {
+//     make: 'Toyota',
+//     model: 'AuDi',
+//     year: 2020
+// }
+// let { make: carMake, model: carModel, year: carYear } = car
+// console.log(carMake);
+// console.log(carModel);
+// console.log(carYear);
+
+
+//.............Default Values:...............//
