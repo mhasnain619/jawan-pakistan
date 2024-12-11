@@ -674,3 +674,209 @@
 
 
 //.............Default Values:...............//
+
+// let settings = {
+//     theme: "Dark"
+// }
+
+// let { theme, language = 'English' } = settings
+// console.log(theme);
+// console.log(language);
+
+
+//..............Array of Arrays:................//
+
+
+// let array = [[1, 2], [3, 4], [5, 6]]
+// let [[num1 = 'a', num2], [num3 = 'b', num4], [num5 = 'c', num6]] = array
+// console.log('a', num1);
+// console.log('b', num3);
+// console.log('c', num5);
+
+
+//............Object within an Object:............//
+
+
+// let profile = {
+//     userName: "hasnain",
+//     details: {
+//         email: "has@gmail.com",
+//         address: 'karachi'
+//     }
+// }
+
+// let { userName, details: { email, address } } = profile
+// console.log(profile);
+
+
+//.............Mix of Arrays and Objects:..............//
+
+
+// let data = {
+//     id: 1,
+//     info: [
+//         { name: "hasnain" }, { age: 25 }
+//     ]
+// }
+
+// let { id, info: [{ name }, { age }] } = data
+// console.log(data);
+
+
+//..........Array Parameters:...............//
+
+// function printCordinates([x, y]) {
+//     console.log(x, y);
+// }
+
+// printCordinates([20, 10])
+// printCordinates([202, 2110])
+// printCordinates([20121, 112])
+
+
+//...........Object Parameters:.............//
+
+// function displayUser({ name, age }) {
+//     console.log(`name :  ${name} , Age : ${age} `)
+
+// }
+
+// displayUser({ name: 'hasnain', age: 21 })
+
+
+//............List Property Names:...................//
+
+
+// let book = {
+//     title: 'Harry Poter',
+//     author: 'hmm',
+//     year: 1999
+// }
+// console.log(Object.keys(book));
+
+
+
+//............Count Properties:.................//
+
+// let student = {
+//     name: 'hasnain',
+//     age: 21,
+//     gender: 'male',
+//     grades: {
+//         Math: "b",
+//         Science: "a",
+//         English: "c"
+//     }
+// }
+// console.log(
+//     Object.keys(student),
+//     Object.keys(student).length
+// );
+
+
+//............Iterate Over Keys:..............//
+
+// let product = {
+//     name: 'Coca Cola',
+//     price: 200,
+//     category: "Juice"
+// }
+// let keys = Object.keys(product)
+// keys.forEach((key) => {
+//     console.log(`${key} : ${product[key]}`);
+// })
+
+
+//...........Sum Values:..........//
+
+
+// let scores = {
+//     Math: 90,
+//     science: 80,
+//     english: 100
+// }
+
+// let allScore = Object.values(scores)
+// console.log(allScore.reduce((a, b) => a + b));
+
+
+//..........Iterate Over Values:...................//
+
+
+// let user = {
+//     userName: 'Hasnain',
+//     email: 'has@gmail.com',
+//     location: "karachi"
+// }
+
+// let newUser = Object.values(user)
+// newUser.forEach((val) => {
+//     console.log(val);
+// })
+
+
+//...........List Entries:..............///
+
+
+// let car = {
+//     make: 'toyota',
+//     model: 'farari',
+//     year: 2020
+// }
+
+// console.log(Object.entries(car));
+
+
+
+//............Convert Object to Array:...............//
+
+// let person = {
+//     firstName: "M",
+//     lastName: "Hasnain",
+//     age: 25
+// }
+
+// console.log(Object.entries(person));
+
+
+//..............Iterate Over Entries:../////////
+
+
+// let setting = {
+//     theme: 'dark',
+//     notification: true,
+//     language: 'english'
+// }
+
+// let newSetting = Object.entries(setting)
+
+// newSetting.forEach(([key, value]) => {
+//     console.log(`${key}: ${value}`);
+// });
+
+
+
+// const inventory = {
+//     apples: 5,
+//     bananas: 0,
+//     oranges: 75,
+//     grapes: 30
+// };
+
+// let filteredKeys = Object.keys(inventory).filter((key) => inventory[key] > 10);
+// console.log(filteredKeys);
+
+
+
+//...............Transform Values:..............//
+
+
+const temperatures = {
+    morning: 20,
+    afternoon: 25,
+    evening: 15
+};
+
+let transformTemp = Object.entries(temperatures).map((e, i) => {
+    return [e[0], e[1] + 5];
+})
