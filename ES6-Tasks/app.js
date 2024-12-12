@@ -1011,3 +1011,52 @@
 
 
 //..........Arrow Function with Array Methods:................//
+
+
+// let array = [1, 2, 3, 4, 5]
+
+// let newArray = array.map((e, i) => {
+//     return e ** 2
+// })
+// console.log(newArray);
+
+
+
+//.........Variable Scope:..............//
+
+
+// function outer() {
+//     let x = 10
+//     function inner() {
+//         console.log("Value of x:", x);
+//         function innerInner() {
+//             x = 20
+//             console.log("Value of x:", x);
+//         }
+//         innerInner()
+//     }
+//     inner()
+// }
+// outer()
+
+//.....................Closure:...................//
+
+
+function createCounter() {
+    let counter = 0
+    return function incerimentCounter() {
+        counter++
+        console.log("Counter value:", counter);
+    }
+}
+let counter1 = createCounter()
+let counter2 = createCounter()
+counter1()
+counter1()
+counter1()
+counter1()
+
+counter2()
+counter2()
+counter2()
+counter2()
