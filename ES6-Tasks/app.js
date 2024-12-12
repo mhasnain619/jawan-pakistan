@@ -899,14 +899,115 @@
 // console.log(newVal);
 
 
-let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 
-function filterAndMap(array, filterFunc, mapFunc) {
-    return array.filter(filterFunc).map(mapFunc)
-}
+// function filterAndMap(array1, filterFunc, mapFunc) {
+//     return array1.filter(filterFunc).map(mapFunc)
+// }
 
-let isOdd = (num) => num % 2 !== 0
-let square = (num) => num * num
-let result = filterAndMap(array, isOdd, square)
-console.log(result) // [9]
+// let isOdd = (num) => num % 2 !== 0
+// let square = (num) => num * num
+// let result = filterAndMap(array, isOdd, square)
+// console.log(result) // [9]
+
+
+
+//...........Sort and Reduce:.............//
+
+
+// let words = ["apple", "banana", "cherry", "date"]
+
+// function sortAndReduce(array, sortFunc, reduceFunc) {
+//     return array.sort(sortFunc).reduce(reduceFunc)
+// }
+
+// let abphabetSortFunc = (a, b) => a.localeCompare(b)
+// console.log(abphabetSortFunc);
+
+// let concaateFunc = (acc, word) => acc + word
+// console.log(concaateFunc);
+
+// let result = sortAndReduce(words, abphabetSortFunc, concaateFunc);
+// console.log(result);
+
+
+//.............Simple Callback:..................//
+
+// function greet(name, callBack) {
+//     let myName = `Hello ${name}`
+//     callBack(myName)
+// }
+
+// greet('hasnain', (mesage) => {
+//     console.log(mesage);
+
+// })
+
+
+// function sayHello() {
+//     console.log('Hello')
+// }
+
+// function greet(num1, num2, callBack) {
+//     console.log(num1 + num2);
+//     callBack()
+// }
+
+// let a = 20
+// let b = 10
+// greet(a, b, sayHello)
+
+
+//..............Asynchronous Callback:.................//
+
+// function fetchData(callBack) {
+//     let data = {
+//         name: "M Hasnain",
+//         age: 25,
+//         occupation: "Software Engineer"
+//     }
+//     console.log('hello world');
+
+//     setTimeout(() => {
+//         callBack(data)
+//     }, 3000)
+// }
+
+// function displayData(data) {
+//     console.log(data);
+
+// }
+// fetchData(displayData)
+
+
+
+// function fetchData(Callback) {
+//     let data = {
+//         name: "M Hasnain",
+//         age: 25,
+//         occupation: "Software Engineer"
+//     }
+//     setTimeout(() => {
+//         Callback(data)
+//     }, 3000)
+// }
+
+// function displayData(data) {
+//     console.log('data', data);
+// }
+
+// fetchData(displayData)
+
+
+//........Simple Arrow Function:................
+
+
+// let add = (a, b) => {
+//     return a + b
+// }
+// console.log(add(2, 4))
+
+
+
+//..........Arrow Function with Array Methods:................//
