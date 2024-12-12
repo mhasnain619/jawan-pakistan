@@ -1065,7 +1065,81 @@
 //...........Simple Default Parameters:................//
 
 
-function greet(name, greetingMessage = 'hello') {
-    console.log(greetingMessage + ' ' + name);
-}
-greet('hasnain')
+// function greet(name, greetingMessage = 'hello') {
+//     console.log(greetingMessage + ' ' + name);
+// }
+// greet('hasnain')
+
+
+//........Default Parameters with Other Arguments:...................//
+
+// function calculateArea(width = 10, height = 5) {
+//     return width * height
+// }
+// console.log(calculateArea());
+// console.log(calculateArea(10, 20));
+
+
+//.........Square Numbers:................//
+
+// let array = [1, 2, 3, 4, 5]
+
+// let newArray = array.map((e, i) => {
+//     return e ** e
+// })
+// console.log(newArray);
+
+
+//.............Convert to Uppercase:...............//
+
+// let words = ["apple", "banana", "cherry"]
+
+// let newWords = words.map((word) => word.toUpperCase())
+// console.log(newWords)
+
+
+//..............Filter Even Numbers:....................//
+
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// let evenNumbers = numbers.filter((number) => number % 2 === 0)
+// console.log(evenNumbers)
+
+
+
+//...............Filter Long Words:..................//
+
+// let words = ["apple", "banana", "cherry", "date"]
+// let newWords = words.filter((e) => e.length > 5)
+// console.log(newWords)
+
+
+// //.......Log Numbers:.............//
+
+// let numbers = [1, 2, 3, 4, 5]
+// numbers.forEach((e, i) => {
+//     console.log(e)
+// })
+
+
+//..............Log Word Lengths:..................//
+
+// let words = ["apple", "banana", "cherry"]
+// words.forEach((word, i) => {
+//     console.log(word.length)
+// })
+
+
+//.........Sum of Numbers:................//
+
+let numbers = [1, 2, 3, 4, 5]
+let sum = numbers.reduce((num1, num2) => {
+    return num1 + num2
+})
+console.log(sum)
+
+
+let words = ["Hello", "world", "this", "is", "JavaScript"]
+let newWords = words.reduce((word1, word2) => {
+    return word1 + " " + word2
+})
+console.log(newWords)
