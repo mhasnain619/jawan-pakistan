@@ -871,12 +871,42 @@
 //...............Transform Values:..............//
 
 
-const temperatures = {
-    morning: 20,
-    afternoon: 25,
-    evening: 15
-};
+// const temperatures = {
+//     morning: 20,
+//     afternoon: 25,
+//     evening: 15
+// };
 
-let transformTemp = Object.entries(temperatures).map((e, i) => {
-    return [e[0], e[1] + 5];
-})
+// const celsiusToFahrenheit = ([key, value]) => [key, (value * 9 / 5) + 32];
+// const transformedArray = Object.entries(temperatures).map(celsiusToFahrenheit);
+// const temperaturesInFahrenheit = Object.fromEntries(transformedArray);
+
+// console.log(temperaturesInFahrenheit);
+
+
+//.........Key-Value Swap:..............//
+
+
+// let roles = {
+//     'admin': 'superuser',
+//     'editor,': 'user',
+//     'viewer': 'guest'
+// }
+
+// let newVal = Object.entries(roles)
+//     .map(([key, value]) => [value, key])
+//     .reduce((acc, [key, value]) => ({ ...acc, [key]: value }))
+// console.log(newVal);
+
+
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
+function filterAndMap(array, filterFunc, mapFunc) {
+    return array.filter(filterFunc).map(mapFunc)
+}
+
+let isOdd = (num) => num % 2 !== 0
+let square = (num) => num * num
+let result = filterAndMap(array, isOdd, square)
+console.log(result) // [9]
