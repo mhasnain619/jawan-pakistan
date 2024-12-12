@@ -1042,21 +1042,30 @@
 //.....................Closure:...................//
 
 
-function createCounter() {
-    let counter = 0
-    return function incerimentCounter() {
-        counter++
-        console.log("Counter value:", counter);
-    }
-}
-let counter1 = createCounter()
-let counter2 = createCounter()
-counter1()
-counter1()
-counter1()
-counter1()
+// function createCounter() {
+//     let counter = 0
+//     return function incerimentCounter() {
+//         counter++
+//         console.log("Counter value:", counter);
+//     }
+// }
+// let counter1 = createCounter()
+// let counter2 = createCounter()
+// counter1()
+// counter1()
+// counter1()
+// counter1()
 
-counter2()
-counter2()
-counter2()
-counter2()
+// counter2()
+// counter2()
+// counter2()
+// counter2()
+
+
+//...........Simple Default Parameters:................//
+
+
+function greet(name, greetingMessage = 'hello') {
+    console.log(greetingMessage + ' ' + name);
+}
+greet('hasnain')
