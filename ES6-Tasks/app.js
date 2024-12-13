@@ -1131,15 +1131,114 @@
 
 //.........Sum of Numbers:................//
 
-let numbers = [1, 2, 3, 4, 5]
-let sum = numbers.reduce((num1, num2) => {
-    return num1 + num2
-})
-console.log(sum)
+// let numbers = [1, 2, 3, 4, 5]
+// let sum = numbers.reduce((num1, num2) => {
+//     return num1 + num2
+// })
+// console.log(sum)
 
 
-let words = ["Hello", "world", "this", "is", "JavaScript"]
-let newWords = words.reduce((word1, word2) => {
-    return word1 + " " + word2
+//................Concatenate Strings:...............//
+
+
+// let words = ["Hello", "world", "this", "is", "JavaScript"]
+// let newWords = words.reduce((word1, word2) => {
+//     return word1 + " " + word2
+// })
+// console.log(newWords)
+
+
+//................Check for Even Number:.....................//
+
+// let numbers = [1, 3, 5, 7, 8]
+// let sum = numbers.some((e, i) => {
+//     return e % 2 == 0
+// })
+// console.log(sum)
+
+
+//.........Check for Long Word:................//
+
+
+// let words = ["apple", "banana", "cherry", "date"]
+
+// let newWord = words.some((e, i) => {
+//     return e.length > 5
+// })
+// console.log(newWord)
+
+
+
+//.............Check All Even Numbers:...............//
+
+// let nums = [2, 4, 6, 8, 10]
+// let newNums = nums.every((e, i) => {
+//     return e % 2 == 0
+// })
+// console.log(newNums)
+
+
+
+//.........Check All Long Words:.............//
+
+// let words = ["elephant", "giraffe", "hippopotamus"]
+// let newWords = words.every((e, i) => {
+//     return e.length > 5
+// })
+// console.log(newWords)
+
+
+//.........Find First Even Number:...............//
+
+// let numbers = [1, 3, 5, 7, 8]
+
+// let newNum = numbers.find((e, i) => {
+//     return e % 2 == 0
+// })
+// console.log(newNum)
+
+
+//.......Find Long Word:................//
+
+
+// let words = ["apple", "banana", "cherry", "date"]
+// let newWord = words.find((e, i) => {
+//     return e.length > 5
+// })
+// console.log(newWord)
+
+
+
+//............Find Index of First Even Number:....................//
+
+// let numbers = [1, 3, 5, 7, 8]
+// let index = numbers.findIndex((e, i) => {
+//     return e % 2 == 0
+// })
+// console.log(index)
+
+
+//...............Find Index of Long Word:...............//
+
+
+// let words = ["apple", "banana", "cherry", "date"]
+// let index = words.findIndex((e, i) => {
+//     return e.length > 5
+// })
+// console.log(index)
+
+
+//........Simple Promise:..............//
+
+
+function delay(milisecond) {
+    return new Promise((res, rej) => {
+        setTimeout(() => {
+            res("Hello")
+        }, milisecond)
+    })
+}
+
+delay(2000).then(() => {
+    console.log("Hello World")
 })
-console.log(newWords)
