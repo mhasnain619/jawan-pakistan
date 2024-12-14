@@ -1404,73 +1404,104 @@
 
 
 ///......................Fetch and Process Data:.....................//
+//..............Error Handling in async/await:..................//
 
 //....get user data....
 
-function fetchUser(shouldFail = false) {
-    console.log('fetching user data.........');
+// function fetchUser(shouldFail = false) {
+//     console.log('fetching user data.........');
 
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (shouldFail) {
+//                 reject('Failed to fetch user data')
+//             } else {
+//                 resolve({
+//                     id: 1,
+//                     name: 'M Hasnain',
+//                     age: 22
+//                 })
+//             }
+
+//         }, 1000)
+//     })
+// }
+
+// //............User posts
+
+// function fetchPosts(ShouldPostsAvailable = false) {
+//     return new Promise((resolve, reject) => {
+//         console.log('fetching user posts.........');
+
+//         setTimeout(() => {
+//             if (ShouldPostsAvailable) {
+//                 reject('failed to fetch user posts...')
+//             } else {
+//                 resolve([
+//                     {
+//                         id: 1,
+//                         title: 'Post 1',
+//                         content: 'This is post 1'
+
+//                     },
+//                     {
+//                         id: 1,
+//                         title: 'Post 1',
+//                         content: 'This is post 1'
+
+//                     },
+//                     {
+//                         id: 1,
+//                         title: 'Post 1',
+//                         content: 'This is post 1'
+
+//                     }
+//                 ])
+//             }
+//         }, 2000)
+//     })
+// }
+
+// async function getUserAndPosts() {
+//     try {
+//         const userData = await fetchUser()
+//         console.log('user Data : ', userData);
+
+//         const posts = await fetchPosts()
+//         console.log('posts : ', posts);
+//     } catch (error) {
+//         console.log('error : ', error);
+//     }
+// }
+
+// getUserAndPosts()
+
+
+//.................Simulate API Calls:..................//
+
+function apiCall(data) {
     return new Promise((resolve, reject) => {
+        const delay = Math.floor(Math.random() * 2000) + 200
         setTimeout(() => {
-            if (shouldFail) {
-                reject('Failed to fetch user data')
+            if (Math.random() < 0.9) {
+                resolve(`Data from ${data}`)
             } else {
-                resolve({
-                    id: 1,
-                    name: 'M Hasnain',
-                    age: 22
-                })
+                reject(`Errorfetching data from ${data}`)
             }
-
-        }, 1000)
+        })
     })
 }
 
-//............User posts
-
-function fetchPosts(ShouldPostsAvailable = false) {
-    return new Promise((resolve, reject) => {
-        console.log('fetching user posts.........');
-
-        setTimeout(() => {
-            if (ShouldPostsAvailable) {
-                reject('failed to fetch user posts...')
-            } else {
-                resolve([
-                    {
-                        id: 1,
-                        title: 'Post 1',
-                        content: 'This is post 1'
-
-                    },
-                    {
-                        id: 1,
-                        title: 'Post 1',
-                        content: 'This is post 1'
-
-                    },
-                    {
-                        id: 1,
-                        title: 'Post 1',
-                        content: 'This is post 1'
-
-                    }
-                ])
-            }
-        }, 2000)
-    })
-}
-
-async function getUserAndPosts() {
+async function getData() {
+    let datas = ['data1', 'data2', 'data3', 'data4']
     try {
-        const userData = await fetchUser()
-        console.log('user Data : ', userData);
-
-        const posts = await fetchPosts()
-        console.log('posts : ', posts);
+        for (let data of datas) {
+            const response = await apiCall(data)
+            console.log(response)
+        }
     } catch (error) {
-        console.log('error : ', error);
+        console.log('error getting data', error)
     }
 }
 
-getUserAndPosts()
+getData()
