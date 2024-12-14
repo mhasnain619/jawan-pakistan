@@ -1231,14 +1231,246 @@
 //........Simple Promise:..............//
 
 
-function delay(milisecond) {
-    return new Promise((res, rej) => {
+// function delay(milisecond) {
+//     return new Promise((res, rej) => {
+//         setTimeout(() => {
+//             res("Hello")
+//         }, milisecond)
+//     })
+// }
+
+// delay(2000).then(() => {
+//     console.log("Hello World")
+// })
+
+
+//.............Promise Chain:.................//
+
+// function fetchData() {
+//     return new Promise((res, req) => {
+//         const myData = {
+//             name: "John",
+//             age: 30
+//         };
+//         res(myData);
+//     })
+// }
+// fetchData().then(() => {
+//     console.log(data.name)
+// })
+
+
+//.........Error Handling:................//
+
+// function fetchUserData() {
+//     return new Promise((res, req) => {
+//         const myData = {
+//             name: 'hasnain',
+//             age: 30
+//         };
+//         if (myData.age == '' || myData.name == '') {
+//             req("Error: User data is missing")
+//         } else {
+//             res(myData)
+//         }
+//     })
+// }
+// fetchUserData()
+//     .then(data => {
+//         console.log("User data fetched successfully:", data);
+//     })
+//     .catch(error => {
+//         console.error("Error fetching user data:", error.message);
+//     });
+
+
+
+//................Simulate Network Request:..............//
+
+// function getWeather(city, callBack) {
+//     console.log(`Fetching weather data for ${city}...`);
+//     setTimeout(() => {
+//         const weatherData = {
+//             city: city,
+//             temperature: 25,
+//             humidity: 60,
+//         }
+//         callBack(weatherData);
+//     }, 2000)
+
+// }
+// getWeather('karachi', (data) => {
+//     console.log("Weather data received:", data)
+// })
+
+// function getWeather(fail = false) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (fail) {
+//                 reject("Error: Unable to fetch weather data");
+//             } else {
+//                 resolve({
+//                     city: 'karachi',
+//                     temperature: 25,
+//                     humidity: 60,
+//                 })
+//             }
+
+//         }, 2000)
+//     })
+// }
+// getWeather(false)
+//     .then(data => {
+//         console.log("Weather data received:", data)
+//     }).catch((err) => {
+//         console.log("Error fetching weather data:", err)
+//     })
+
+
+//...........Simple async Function:...............//
+
+// function delay(sec) {
+//     return new Promise(resolve => setTimeout(resolve, sec))
+// }
+// async function sayHello() {
+//     await delay(2000)
+//     console.log("Hello! World")
+// }
+
+// sayHello()
+
+
+
+//.................Fetch Data with async/await:.............//
+
+// function fetchUserData(fail = false) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (fail) {
+//                 reject('Failed to fetch user data')
+//             } else {
+//                 resolve({
+//                     id: 1,
+//                     name: 'John Doe',
+//                     email: 'john@example.com',
+//                 })
+//             }
+//         }, 2000)
+//     })
+// }
+// async function getUserData(fail = true) {
+//     try {
+//         const userData = await fetchUserData(fail)
+//         console.log('User data:', userData)
+//     } catch (err) {
+//         console.log('Error fetching user data:', err)
+//     }
+
+// }
+
+// getUserData(false)
+
+
+// function fecthUserData(shouldFail = false) {
+//     return new Promise((resolve, reject) => {
+//         console.log('User data is fetching........');
+
+//         setTimeout(() => {
+//             if (shouldFail) {
+//                 reject('Failed to fetch user data')
+//             } else {
+//                 resolve({
+//                     id: 1,
+//                     name: 'M Hasnain',
+//                     email: 'mhasnain@gmail.com',
+//                     city: 'Karachi'
+//                 })
+//             }
+//         }, 5000)
+//     })
+// }
+
+// async function getUserData(shouldFail = false) {
+//     try {
+//         const userata = await fecthUserData(shouldFail)
+//         console.log('User data:', userata)
+//     } catch (err) {
+//         console.log('Error fetching user data:', err)
+//     }
+// }
+
+// getUserData(true)
+
+
+
+///......................Fetch and Process Data:.....................//
+
+//....get user data....
+
+function fetchUser(shouldFail = false) {
+    console.log('fetching user data.........');
+
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
-            res("Hello")
-        }, milisecond)
+            if (shouldFail) {
+                reject('Failed to fetch user data')
+            } else {
+                resolve({
+                    id: 1,
+                    name: 'M Hasnain',
+                    age: 22
+                })
+            }
+
+        }, 1000)
     })
 }
 
-delay(2000).then(() => {
-    console.log("Hello World")
-})
+//............User posts
+
+function fetchPosts(ShouldPostsAvailable = false) {
+    return new Promise((resolve, reject) => {
+        console.log('fetching user posts.........');
+
+        setTimeout(() => {
+            if (ShouldPostsAvailable) {
+                reject('failed to fetch user posts...')
+            } else {
+                resolve([
+                    {
+                        id: 1,
+                        title: 'Post 1',
+                        content: 'This is post 1'
+
+                    },
+                    {
+                        id: 1,
+                        title: 'Post 1',
+                        content: 'This is post 1'
+
+                    },
+                    {
+                        id: 1,
+                        title: 'Post 1',
+                        content: 'This is post 1'
+
+                    }
+                ])
+            }
+        }, 2000)
+    })
+}
+
+async function getUserAndPosts() {
+    try {
+        const userData = await fetchUser()
+        console.log('user Data : ', userData);
+
+        const posts = await fetchPosts()
+        console.log('posts : ', posts);
+    } catch (error) {
+        console.log('error : ', error);
+    }
+}
+
+getUserAndPosts()
